@@ -1,20 +1,5 @@
-/* .list {
-    background: #04DB72
-    
-} */
-/* .container {
-    width: 80%;
-    height: auto;
-}
-  
-.foot {
-    position: fixed;
-    left: 10%;
-    bottom: 0;
-    width: 80%;
-    text-align: center;
-} */
-/* //////// */
-#text {
-    background: rgb(231, 221, 221);
+body {
+    background-image: url(https://images4.alphacoders.com/912/thumbbig-91296.jpg);
+padding: 18px;
+background-size: cover;
 }

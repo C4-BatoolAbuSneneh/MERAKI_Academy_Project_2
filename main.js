@@ -1,31 +1,26 @@
-const body = $("body");
-const header = $("<h1>To Do List </h1>");
-header.appendTo(body);
-const list = $("<ul></ul>");
-list.appendTo(body);
-const tasks = $("<p>Tasks :</p>")
-tasks.appendTo(body)
-const inputName = $("</input>");
-const button = $("<button >Add To List</button>");
-button.id = ("add")
-inputName.appendTo(body);
-button.appendTo(body);
-let todo=[];
-const addItems = () => {
-   $(document).ready( () => {
-    $("#btn").click(function(){
-    $("li").append("<p>Tasks :</p>");
-  });
-  // $("#btn").click( () => {
-  //   $("#btn").append("<p>Tasks :</p>")
-  // })
-  })
-    // li.appendTo(list)
+const body = $("body")
+const header = $("<h1></h1>")
+const list = $("<ul></ul>")
+const button = $("<button></button>")
+const inputList = $("<input/>")
+header.text("To Do List")
+button.text("Add To List")
+const array = [];
+header.appendTo(body)
+list.appendTo(header)
+inputList.appendTo(header)
+button.appendTo(header)
+
+const addList = () => {
+array.forEach(element  =>{
+const toDo = $("<li></li>")
+const deleteButton = $("<button>Delete</button>")
+const updateButton = $("<button>Update</button>")
+const updatetoDo = $("<input/>")
+toDo.text(element)
+list.append(toDo)
+toDo.append("deleteButton")
+toDo.append("updateButton")
+toDo.append("updatetoDo")
+})
 }
-
-
-
-
-//////////////////////////////////////////
-
-
