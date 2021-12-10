@@ -16,11 +16,18 @@ array.forEach(element  =>{
 const toDo = $("<li></li>")
 const deleteButton = $("<button>Delete</button>")
 const updateButton = $("<button>Update</button>")
-const updatetoDo = $("<input/>")
+const updateToDo = $("<input/>")
 toDo.text(element)
 list.append(toDo)
 toDo.append("deleteButton")
 toDo.append("updateButton")
-toDo.append("updatetoDo")
+toDo.append("updateToDo")
+deleteButton.on("click", () => {
+  array.forEach((toDo, i) => {
+    if (element === toDo) {
+      list.splice(i, 1)
+    }
+  })
+  toDo.remove()
 })
-}
+updateButton.on("click", () => {
