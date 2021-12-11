@@ -1,15 +1,18 @@
 const body = $("body")
 const header = $("<h1></h1>")
-const listList = $("<ul></ul>") 
+const listList = $("<ul></ul>")
 const addButton = $("<button></button>")
 const inputToDo = $("<input/>")
 header.text("To Do List")
 addButton.text("Add To List")
+
 const list = [];
+
 header.appendTo(body)
 listList.appendTo(header)
 inputToDo.appendTo(header)
 addButton.appendTo(header)
+
 const addList = () => {
     list.forEach(element => {
         const toDo = $("<li></li>")
@@ -55,4 +58,5 @@ addButton.on("click", () => {
 });
 
 addList()
-  
+console.log(localStorage)
+// localStorage.getItem("body")
