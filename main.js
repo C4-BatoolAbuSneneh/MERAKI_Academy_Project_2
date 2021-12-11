@@ -1,33 +1,58 @@
 const body = $("body")
 const header = $("<h1></h1>")
-const list = $("<ul></ul>")
-const button = $("<button></button>")
-const inputList = $("<input/>")
+const listList = $("<ul></ul>") 
+const addButton = $("<button></button>")
+const inputToDo = $("<input/>")
 header.text("To Do List")
-button.text("Add To List")
-const array = [];
+addButton.text("Add To List")
+const list = [];
 header.appendTo(body)
-list.appendTo(header)
-inputList.appendTo(header)
-button.appendTo(header)
-
+listList.appendTo(header)
+inputToDo.appendTo(header)
+addButton.appendTo(header)
 const addList = () => {
-array.forEach(element  =>{
-const toDo = $("<li></li>")
-const deleteButton = $("<button>Delete</button>")
-const updateButton = $("<button>Update</button>")
-const updateToDo = $("<input/>")
-toDo.text(element)
-list.append(toDo)
-toDo.append("deleteButton")
-toDo.append("updateButton")
-toDo.append("updateToDo")
-deleteButton.on("click", () => {
-  array.forEach((toDo, i) => {
-    if (element === toDo) {
-      list.splice(i, 1)
-    }
-  })
-  toDo.remove()
-})
-updateButton.on("click", () => {
+    list.forEach(element => {
+        const toDo = $("<li></li>")
+        const deleteButton = $("<button>Delete</button>")
+        const updateButton =  $("<button>Update</button>")
+        const updateToDo = $("<input/>")
+        toDo.text(element)
+        listList.append(toDo)
+        toDo.append(deleteButton)
+        toDo.append(updateButton)
+        toDo.append(updateToDo)
+
+        deleteButton.on("click", () => {
+            list.forEach((toDo, i) => {
+              if (element === toDo) {
+                list.splice(i, 1)
+              }
+            })
+            toDo.remove()
+        })
+
+        updateButton.on("click", () => {
+           list.forEach((toDo, i) => {
+                if (element === toDo) {
+                  list[i] = updateToDo.val()
+                                                  
+                }
+              })
+              
+              listList.html("")
+              addList()   
+        })
+    })
+}
+const addToList = () => {
+    list.push(inputToDo.val())
+    listList.html("")
+    addList()
+}
+
+addButton.on("click", () => {
+    addToList()
+});
+
+addList()
+  
