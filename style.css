@@ -9,6 +9,8 @@ font-size: 20px;
 
 button {
     border-radius: 10px;
+    
+    
 }
 button:hover {
     background: #FF00AC;
@@ -20,4 +22,12 @@ input {
 ul{
     background: #DB8C25;
     font-size: 30px;
+}
+.edit{
+    width: 28px;
+    height: 25px;
+}
+.delete {
+    width: 28px;
+    height: 25px;
 }
