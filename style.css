@@ -1,7 +1,6 @@
 body {
-    background: #DB605E;
-    /* background: #3C29FF; */
-    /* background-image: url(https://images4.alphacoders.com/912/thumbbig-91296.jpg); */
+    display: flex;
+background: #DB605E;
 padding: 18px;
 grid-template-columns: auto;
 background-size: cover;
@@ -11,26 +10,33 @@ font-size: 20px;
 
 button {
     border-radius: 10px;
-    /* background: #FFB5A6; */
-    
 }
 button:hover {
-    background: #F0988D;
+    background: #FFB5A6;
     cursor: pointer;
+
 }
 input {
     border-radius: 15px;
      width: 150px;
     height: 17px; 
+   
 }
 ul{
-    font-size: 30px;
+    font-size: 28px;
+    padding:0  60px;
 }
 .edit{
     width: 28px;
     height: 25px;
+    cursor: pointer;
 }
 .delete {
     width: 28px;
     height: 25px;
+    cursor: pointer;
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
 }
