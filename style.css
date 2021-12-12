@@ -1,18 +1,17 @@
 body {
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.zx7T9Tgwd8vPdKokJ0hsNwHaEG&pid=Api&P=0&w=278&h=154);
+    background-size: cover;
     display: flex;
-background: #DB605E;
 padding: 18px;
 grid-template-columns: auto;
-background-size: cover;
 margin: 0 10px ;
-font-size: 20px;
 }
 
 button {
     border-radius: 10px;
 }
 button:hover {
-    background: #FFB5A6;
+    background: #f090d0;
     cursor: pointer;
 
 }
@@ -23,18 +22,23 @@ input {
    
 }
 ul{
-    font-size: 28px;
+    font-size: 20px;
     padding:0  60px;
-}
+    list-style-type: square;
+    background: rgb(240, 203, 227);
+} 
+
 .edit{
     width: 28px;
     height: 25px;
     cursor: pointer;
+    margin: 2px;
 }
 .delete {
     width: 28px;
     height: 25px;
     cursor: pointer;
+    margin: 5px;
 }
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
