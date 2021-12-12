@@ -25,7 +25,7 @@ input {
 ul{
     font-size: 20px;
     padding:0  60px;
-    list-style-type: square;
+    list-style-type:square 2px;
     background: rgba(240, 203, 227, 0.333);
     border: 2px rgba(0, 0, 0, 0.445) solid;
 } 
