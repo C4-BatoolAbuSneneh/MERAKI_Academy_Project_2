@@ -51,6 +51,7 @@ const addList = () => {
 const addToList = () => {
   list.push(inputToDo.val());
   localStorage.setItem("ToDos", JSON.stringify(arr));
+  //  JSON.parse(localStorage.removeItem("toDos"));
   listItem.html("");
   addList();
 };
