@@ -33,6 +33,8 @@ $(() => {
           }
         });
         toDo.remove();
+    localStorage.setItem("ToDos", JSON.stringify(list));
+
       });
 
       updateButton.on("click", () => {
@@ -44,14 +46,15 @@ $(() => {
 
         listItem.html("");
         addList();
+        localStorage.setItem("ToDos", JSON.stringify(list));
+
       });
     });
   };
   const addToList = () => {
     list.push(inputToDo.val());
     localStorage.setItem("ToDos", JSON.stringify(list));
-    localStorage.removeItem("ToDos", JSON.stringify(list));
-    localStorage.setItem("ToDos", JSON.stringify(list));
+
     listItem.html("");
     addList();
   };
