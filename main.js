@@ -1,5 +1,5 @@
 const body = $("body");
-const header = $("<h1></h1>");
+const header = $("<h1></h1>")
 const listItem = $("<ul></ul>");
 const button = $("<button></button>");
 const inputToDo = $("<input/>");
@@ -14,9 +14,9 @@ inputToDo.appendTo(header);
 button.appendTo(header);
 
 let list = JSON.parse(localStorage.getItem("ToDos"));
-// console.log(list);
+
 const addList = () => {
-  list.forEach((element) => {
+ list.forEach((element) => {
     const toDo = $("<li></li>");
     const deleteButton = $(`<button class="delete";><i class="fas fa-trash-alt"></i></button>`);
     const updateButton = $(`<button class="edit";><i class="far fa-edit"></i></button>`);
@@ -49,9 +49,8 @@ const addList = () => {
   });
 };
 const addToList = () => {
-  arr.push(inputToDo.val());
+  list.push(inputToDo.val());
   localStorage.setItem("ToDos", JSON.stringify(arr));
-
   listItem.html("");
   addList();
 };
@@ -66,3 +65,5 @@ addList();
 // localStorage.getItem("Key")
 
 // list.push(input);
+  // window.localStorage.removeItem( "ToDos");
+  // localStorage.removeItem = null;
