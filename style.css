@@ -10,6 +10,7 @@ margin: 0 10px ;
  }
 button {
     border-radius: 10px;
+  
 }
 button:hover {
     background: #f090d0;

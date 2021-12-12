@@ -7,7 +7,7 @@ $(() => {
 
   header.text("To Do List :");
   button.text("Add To List");
-  
+
   header.appendTo(body);
   listItem.appendTo(header);
   inputToDo.appendTo(header);
@@ -66,3 +66,4 @@ $(() => {
 
   addList();
 });
+
