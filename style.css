@@ -14,14 +14,14 @@ button {
     
 }
 button:hover {
-    background: #FF00AC;
+    background: #EEC900;
     cursor: pointer;
 }
 input {
     border-radius: 15px;
 }
 ul{
-    background: #DB8C25;
+    background: #fff;
     font-size: 30px;
 }
 .edit{
@@ -31,10 +31,4 @@ ul{
 .delete {
     width: 28px;
     height: 25px;
-}
-
-
-
-#hh{
-background: orange;
 }
