@@ -1,8 +1,9 @@
 body {
-    
-    background: #009BFF;
+    background: #DB605E;
+    /* background: #3C29FF; */
     /* background-image: url(https://images4.alphacoders.com/912/thumbbig-91296.jpg); */
 padding: 18px;
+grid-template-columns: auto;
 background-size: cover;
 margin: 0 10px ;
 font-size: 20px;
@@ -10,18 +11,19 @@ font-size: 20px;
 
 button {
     border-radius: 10px;
-    
+    /* background: #FFB5A6; */
     
 }
 button:hover {
-    background: #EEC900;
+    background: #F0988D;
     cursor: pointer;
 }
 input {
     border-radius: 15px;
+     width: 150px;
+    height: 17px; 
 }
 ul{
-    background: #fff;
     font-size: 30px;
 }
 .edit{
