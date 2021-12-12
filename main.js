@@ -66,7 +66,6 @@ $(() => {
   addList();
   // new Date(new Date().setFullYear(new Date().getFullYear() + 1))
 
-  // let d = new Date();
-  //   console.log(d);
-
+  let d = new Date();
+    console.log(d);
 });
