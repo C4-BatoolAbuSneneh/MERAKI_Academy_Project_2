@@ -15,7 +15,6 @@ button {
 button:hover {
     background: #f090d0;
     cursor: pointer;
-
 }
 input {
     border-radius: 15px;
@@ -27,10 +26,9 @@ ul{
     font-size: 20px;
     padding:0  60px;
     list-style-type: square;
-    background: rgb(240, 203, 227);
+    background: rgba(240, 203, 227, 0.333);
     border: 2px rgba(0, 0, 0, 0.445) solid;
 } 
-
 .edit{
     width: 28px;
     height: 25px;
