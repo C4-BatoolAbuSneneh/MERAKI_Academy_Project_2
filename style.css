@@ -1,11 +1,8 @@
 body {
-/* background:linear-gradient(rgba(0,0,0,5),rgba(0,0,0,5)),url(https://tse1.mm.bing.net/th?id=OIP.zx7T9Tgwd8vPdKokJ0hsNwHaEG&pid=Api&P=0&w=278&h=154);;*/
- /* background-image: url(https://tse1.mm.bing.net/th?id=OIP.zx7T9Tgwd8vPdKokJ0hsNwHaEG&pid=Api&P=0&w=278&h=154);  */
  background-size: cover;
  background-image: url(./th.jpg);
 background-position: center;
 height: 100vh;  
-
     display: flex;
  padding: 18px;
 grid-template-columns: auto;
