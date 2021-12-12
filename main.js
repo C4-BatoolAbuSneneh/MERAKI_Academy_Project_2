@@ -14,7 +14,7 @@ inputToDo.appendTo(header);
 button.appendTo(header);
 
 let list = JSON.parse(localStorage.getItem("ToDos"));
-
+// console.log(list)
 const addList = () => {
  list.forEach((element) => {
     const toDo = $("<li></li>");
