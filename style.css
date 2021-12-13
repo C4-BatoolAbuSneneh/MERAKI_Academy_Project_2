@@ -35,14 +35,35 @@ ul{
     cursor: pointer;
     margin: 2px;
 }
+.edit:hover{
+    background: violet;
+}
 .delete {
     width: 28px;
     height: 25px;
     cursor: pointer;
     margin: 5px;
 }
+.delete:hover{
+    background: red;
+}
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
    color: rgb(77, 26, 74);
+}
+/* ul li.checked {
+    background: turquoise;
+    text-decoration: line-through;
+} */
+/* line{
+    text-decoration-line: overline;
+    background-color: turquoise;
+} */
+.line:hover{
+background: rgb(26, 233, 26);
+
+}
+.line{
+    text-decoration-line: line-through;
 }
