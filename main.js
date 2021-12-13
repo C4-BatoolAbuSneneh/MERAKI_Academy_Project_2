@@ -1,3 +1,4 @@
+const localStorage = window.localStorage;
 $(() => {
   const body = $("body");
   const header = $("<h1></h1>")
@@ -7,17 +8,17 @@ $(() => {
 
   header.text("To Do List :");
   button.text("Add To List");
+  
+  const list = [];
 
   header.appendTo(body);
   listItem.appendTo(header);
   inputToDo.appendTo(header);
   button.appendTo(header);
 
-  const list = JSON.parse(localStorage.getItem("ToDos")) || [];
   const addList = () => {
-     console.log(list);
-   list.forEach((element) => {
-    
+ let list = JSON.parse(localStorage.getItem("ToDos"));
+    list.forEach((element) => {
       const toDo = $("<li></li>");
       const deleteButton = $(`<button class="delete";><i class="fas fa-trash-alt"></i></button>`);
       const line = $(`<button class="line";><i class="fas fa-check"></i></button>`);
@@ -36,8 +37,9 @@ $(() => {
             list.splice(i, 1);
           }
         });
+            localStorage.setItem("ToDos", JSON.stringify(list));
+
         toDo.remove();
-    localStorage.setItem("ToDos", JSON.stringify(list));
       });
 
       updateButton.on("click", () => {
@@ -46,21 +48,21 @@ $(() => {
             list[i] = updateToDo.val();
           }
         });
-
         listItem.html("");
+         localStorage.setItem("ToDos", JSON.stringify(list));
         addList();
-        localStorage.setItem("ToDos", JSON.stringify(list));
       });
       line.on("click", () =>{
         toDo.css('text-decoration-line', 'line-through')
 })
+    localStorage.setItem("ToDos", JSON.stringify(list));
     });
+
   }; 
   const addToList = () => {
     list.push(inputToDo.val());
-    localStorage.setItem("ToDos", JSON.stringify(list));
-
     listItem.html("");
+      localStorage.setItem("ToDos", JSON.stringify(list));
     addList();
   };
 
@@ -86,9 +88,3 @@ $(() => {
 
 
 
-//       let list = document.querySelector('ul');
-// list.addEventListener('click', function(ev) {
-//   if (ev.target.tagName === 'list') {
-//     ev.target.classList.toggle('checked');
-//   }
-// }, false);
