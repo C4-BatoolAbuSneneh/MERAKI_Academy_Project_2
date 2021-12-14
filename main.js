@@ -1,15 +1,15 @@
 const localStorage = window.localStorage;
-$(() => {
+
   const body = $("body");
   const header = $("<h1></h1>")
-  const listItem = $("<ul></ul>");
+  
   const button = $("<button></button>");
   const inputToDo = $("<input/>");
-
+const listItem = $("<ul></ul>");
   header.text("To Do List :");
   button.text("Add To List");
   
-  const list = [];
+  let list = [];
 
   header.appendTo(body);
   listItem.appendTo(header);
@@ -17,7 +17,7 @@ $(() => {
   button.appendTo(header);
 
   const addList = () => {
- let list = JSON.parse(localStorage.getItem("ToDos"));
+     list =  JSON.parse(localStorage.getItem("ToDos")) ;
     list.forEach((element) => {
       const toDo = $("<li></li>");
       const deleteButton = $(`<button class="delete";><i class="fas fa-trash-alt"></i></button>`);
@@ -49,20 +49,23 @@ $(() => {
           }
         });
         listItem.html("");
-         localStorage.setItem("ToDos", JSON.stringify(list));
+        localStorage.setItem("ToDos", JSON.stringify(list));
+
         addList();
       });
       line.on("click", () =>{
         toDo.css('text-decoration-line', 'line-through')
+        localStorage.setItem("ToDos", JSON.stringify(list)); 
 })
-    localStorage.setItem("ToDos", JSON.stringify(list));
     });
 
+    
   }; 
   const addToList = () => {
     list.push(inputToDo.val());
     listItem.html("");
       localStorage.setItem("ToDos", JSON.stringify(list));
+
     addList();
   };
 
@@ -71,10 +74,6 @@ $(() => {
   });
 
   addList();
-});
-
-
-
 
 
 
