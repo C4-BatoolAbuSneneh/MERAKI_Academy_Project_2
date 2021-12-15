@@ -2,7 +2,7 @@ const localStorage = window.localStorage;
 const firstPage = $(".firstPage");
 const toDoList = $(`<h3></h3>`);
 const img = $(
-  `<img class="img" src="./128697255-multitasking-business-woman-person-working-hard-but-happy-on-office-table-desk-vector-illustration-f.webp" alt="organize">`
+  `<img class="img" src="images/128697255-multitasking-business-woman-person-working-hard-but-happy-on-office-table-desk-vector-illustration-f.webp" alt="organize">`
 );
 const header1 = $("<h2></h2>");
 const button1 = $(`<button class="getstarted">Get Started</button>`);
