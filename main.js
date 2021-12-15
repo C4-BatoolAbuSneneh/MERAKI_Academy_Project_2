@@ -8,7 +8,7 @@ const header1 = $("<h2></h2>");
 const button1 = $(`<button class="getstarted">Get Started</button>`);
 
 header1.text("Start enjoying a more organized life");
-toDoList.text("ToDo List");
+toDoList.text("To-Do List");
 
 toDoList.appendTo(firstPage);
 img.appendTo(firstPage);
@@ -24,7 +24,7 @@ const listItem = $("<ul></ul>");
 header.text(" To-Do App! ");
 button.text("Add");
 
-header.hide()
+secondPage.hide()
 
 let list = [];
 
@@ -36,7 +36,7 @@ listItem.appendTo(header);
 
 button1.on("click", () => {
   firstPage.hide();
-  header.show();
+  secondPage.show();
 });
 
 const addList = () => {
@@ -54,13 +54,6 @@ const addList = () => {
       `<button class="edit";><i class="far fa-edit"></i></button>`
     ); 
     
-    //////////////////////  
-      //  updateToDo.hide()
-
-    // updateButton.on("click", () => {
-    //   updateToDo.show()
-    // });
-/////
     const updateToDo = $(`<input class="editbutton" placeholder=" Edit Your Task"/>`);
 
     toDo.text(element);
@@ -101,13 +94,10 @@ const addList = () => {
     line.on("click", () => {
       toDo.css("text-decoration-line", "line-through");
     });
-    localStorage.setItem("ToDos", JSON.stringify(list));
-
+    // if (toDo === true) {
+    //   ("text-decoration-line", "line-through");
+    // }
   });
-  // updateButton.on("click", () => {
-  //   updateToDo.show()
-  // });
-
 };
 
 const addToList = () => {
