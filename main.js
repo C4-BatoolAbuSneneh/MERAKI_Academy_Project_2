@@ -94,12 +94,8 @@ const addList = () => {
     line.on("click", () => {
       toDo.css("text-decoration-line", "line-through");
     });
-    // if (toDo === true) {
-    //   ("text-decoration-line", "line-through");
-    // }
   });
 };
-
 const addToList = () => {
   list.push(inputToDo.val());
   listItem.html("");
